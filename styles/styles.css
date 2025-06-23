@@ -1,0 +1,67 @@
+body {
+  background: #111;
+  color: white;
+  font-family: Arial;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+#app {
+  max-width: 700px;
+  width: 100%;
+  padding: 1rem;
+}
+#info-panel {
+  position: relative;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+#game-message {
+  position: relative;
+  z-index: 1;
+  font-weight: bold;
+  font-style: italic;
+  text-shadow: 0 0 4px black;
+}
+button, #action-buttons button {
+  z-index: 1;
+  padding: 1rem;
+  background: #333;
+  border: none;
+  color: white;
+  margin: 0.25rem;
+  cursor: pointer;
+}
+.hidden {
+  display: none;
+}
+#background-overlay {
+  position: absolute;
+  inset: 0;
+  border-radius: 8px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.phase-morning #background-overlay {
+  background-color: rgba(255, 244, 214, 0.1); /* soft light */
+}
+
+.phase-afternoon #background-overlay {
+  background-color: rgba(255, 255, 255, 0); /* clear daylight */
+}
+
+.phase-evening #background-overlay {
+  background-color: rgba(0, 0, 64, 0.2); /* bluish tint */
+}
+
+.phase-night #background-overlay {
+  background-color: rgba(0, 0, 0, 0.9); /* dark overlay */
+}

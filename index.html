@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mini RPG</title>
+  <link rel="stylesheet" href="styles/styles.css" />
+</head>
+<body>
+  <div id="app">
+    <div id="top-bar">
+      <span id="player-status">HP: 100</span>
+    </div>
+    <div id="info-panel">
+      <div id="background-overlay"></div>
+      <p id="game-message">Loading...</p>
+      <button id="restart-button" class="hidden">Restart Game</button>
+    </div>
+    <div id="action-buttons"></div>
+  </div>
+  <!-- Restart Game Button -->
+
+
+  <script type="module">
+    import { Game } from './scripts/game.js';
+    const game = new Game("Hero");
+    game.start();
+  </script>
+</body>
+</html>
